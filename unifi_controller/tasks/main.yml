@@ -1,0 +1,28 @@
+---
+# tasks file for unifi_controller
+#
+- name: Copie du docker compose file
+  copy:
+    src: compose.yaml
+    dest: /tmp/
+
+- name: Création du dossier docker pour mongodb
+  file:
+    path: /docker/mongodb
+    state: directory
+    mode: '0755'
+
+- name: Copie du fichier init-mongo.js
+  copy:
+    src: init-mongo.js
+    dest: /docker/mongodb/
+
+- name: Lancer le docker-compose
+  community.docker.docker_compose_v2:
+    project_src: /tmp
+    state: present
+  register: output
+
+- name: Afficher le résultat
+  debug:
+    var: output
