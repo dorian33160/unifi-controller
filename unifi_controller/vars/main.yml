@@ -1,2 +1,5 @@
 ---
 # vars file for unifi_controller
+#
+#
+controller_ip: 10.0.2.5

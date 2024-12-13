@@ -1,0 +1,4 @@
+---
+# vars file for ap_enrolement
+#
+controller_ip: 10.0.2.5

@@ -26,3 +26,8 @@
 - name: Afficher le résultat
   debug:
     var: output
+
+- name: Test de la page web en faisant un GET
+  ansible.builtin.uri:
+    url: https://{{ controller_ip }}:8443
+    validate_certs: false

@@ -5,3 +5,8 @@
   roles:
     - docker_install
     - unifi_controller
+
+- hosts: aps
+  remote_user: ubnt
+  roles:
+    - ap_enrolement

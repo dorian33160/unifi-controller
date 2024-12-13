@@ -4,3 +4,12 @@ servers:
     10.0.2.5:
       ansible_python_interpreter: /usr/bin/python3
       ansible_password: "debian"
+
+aps:
+  hosts:
+    10.0.2.100:
+      ansible_python_interpreter: /usr/bin/python3
+      ansible_password: "ubnt"
+    10.0.2.200:
+      ansible_python_interpreter: /usr/bin/python3
+      ansible_password: "ubnt"
