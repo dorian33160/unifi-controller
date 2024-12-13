@@ -2,6 +2,6 @@
 # tasks file for ap_enrolement
 #
 #
-- name: Ajout des permissions aux dossiers APT et de la clé gpg du répo docker
+- name: Enrollement des bornes dans le controlleur
   shell: |
     set-inform http://{{ controller_ip }}:8080/inform
